@@ -133,36 +133,43 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="red_2p"
                     android:text="red" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="yellow_2p"
                     android:text="yellow" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="green_2p"
                     android:text="green" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="brown_2p"
                     android:text="brown" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="blue_2p"
                     android:text="blue" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="pink_2p"
                     android:text="pink" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="black_2p"
                     android:text="black" />
 
                 <LinearLayout
@@ -182,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
-
+                        android:onClick="foul_2p"
                         android:text="foul" />
                     />
                 </LinearLayout>

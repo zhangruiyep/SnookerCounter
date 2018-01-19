@@ -17,24 +17,24 @@ public class MainActivity extends AppCompatActivity {
     private int score_1p;
     private int score_2p;
 
-    private void display_1p_score(int value) {
+    private void display_1p_score(void) {
         TextView textView = findViewById(R.id.score_1p_text);
-        textView.setText(String.valueOf(value));
+        textView.setText(String.valueOf(score_1p));
     }
 
     private void add_1p_score(int value) {
         score_1p += value;
-        display_1p_score(score_1p);
+        display_1p_score();
     }
 
-    private void display_2p_score(int value) {
+    private void display_2p_score() {
         TextView textView = findViewById(R.id.score_2p_text);
-        textView.setText(String.valueOf(value));
+        textView.setText(String.valueOf(score_2p));
     }
 
     private void add_2p_score(int value) {
         score_2p += value;
-        display_2p_score(score_2p);
+        display_2p_score();
     }
 
     public void red_2p(View view) {
@@ -103,5 +103,12 @@ public class MainActivity extends AppCompatActivity {
         Spinner sp1 = findViewById(R.id.spinner_1p_foul_value);
 
         add_2p_score(Integer.parseInt(sp1.getSelectedItem().toString()));
+    }
+
+    public void scoreReset(View view) {
+        score_1p = 0;
+        score_2p = 0;
+        display_1p_score();
+        display_2p_score();
     }
 }
