@@ -27,58 +27,95 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1P"
+                    android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textAlignment="center" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/score_1p_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
+                    android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textAlignment="center" />
+                    android:textSize="56sp" />
 
-                <Button
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="red_1p"
-                    android:text="red" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="yellow_1p"
-                    android:text="yellow" />
+                    <ImageButton
+                        android:id="@+id/red_ball_1p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/redball"
+                        android:onClick="red_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="green_1p"
-                    android:text="green" />
+                    <ImageButton
+                        android:id="@+id/yellow_ball_1p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/red_ball_1p_btn"
+                        android:background="@drawable/yellowball"
+                        android:onClick="yellow_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="brown_1p"
-                    android:text="brown" />
+                    <ImageButton
+                        android:id="@+id/green_ball_1p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/red_ball_1p_btn"
+                        android:background="@drawable/greenball"
+                        android:onClick="green_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="green" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="blue_1p"
-                    android:text="blue" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellow_ball_1p_btn"
+                        android:layout_toRightOf="@id/green_ball_1p_btn"
+                        android:background="@drawable/brownball"
+                        android:onClick="brown_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="pink_1p"
-                    android:text="pink" />
+                    <ImageButton
+                        android:id="@+id/blue_ball_1p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/green_ball_1p_btn"
+                        android:background="@drawable/blueball"
+                        android:onClick="blue_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="blue" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="black_1p"
-                    android:text="black" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/green_ball_1p_btn"
+                        android:layout_toRightOf="@id/blue_ball_1p_btn"
+                        android:background="@drawable/pinkball"
+                        android:onClick="pink_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="pink" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/blue_ball_1p_btn"
+                        android:background="@drawable/blackball"
+                        android:onClick="black_1p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="black" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,10 +123,10 @@
                     android:orientation="horizontal">
 
                     <Spinner
+                        android:id="@+id/spinner_1p_foul_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:id="@+id/spinner_1p_foul_value"
                         android:entries="@array/foul_values">
 
 
@@ -113,22 +150,26 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="8dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1P"
-                    android:textAlignment="center" />
+                    android:text="2P"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/score_2p_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="56sp" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -178,12 +219,11 @@
                     android:orientation="horizontal">
 
                     <Spinner
+                        android:id="@+id/spinner_2p_foul_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:id="@+id/spinner_2p_foul_value"
-                        android:entries="@array/foul_values">
-                    </Spinner>
+                        android:entries="@array/foul_values"></Spinner>
 
                     <Button
                         android:layout_width="wrap_content"
@@ -195,13 +235,14 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:text="reset"
-            />
+            android:layout_centerHorizontal="true"
+            android:onClick="scoreReset"
+            android:text="reset" />
     </RelativeLayout>
 
 

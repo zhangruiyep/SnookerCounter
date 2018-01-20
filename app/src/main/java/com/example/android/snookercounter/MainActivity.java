@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private int score_1p;
     private int score_2p;
 
-    private void display_1p_score(void) {
+    private void display_1p_score() {
         TextView textView = findViewById(R.id.score_1p_text);
         textView.setText(String.valueOf(score_1p));
     }
