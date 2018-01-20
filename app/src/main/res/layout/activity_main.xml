@@ -9,12 +9,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_margin="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -58,6 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@id/red_ball_1p_btn"
+                        android:layout_toEndOf="@id/red_ball_1p_btn"
                         android:background="@drawable/yellowball"
                         android:onClick="yellow_1p"
                         android:scaleX="0.8"
@@ -72,12 +75,13 @@
                         android:onClick="green_1p"
                         android:scaleX="0.8"
                         android:scaleY="0.8"
-                        android:text="green" />
+                        />
 
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/yellow_ball_1p_btn"
+                        android:layout_toEndOf="@id/green_ball_1p_btn"
                         android:layout_toRightOf="@id/green_ball_1p_btn"
                         android:background="@drawable/brownball"
                         android:onClick="brown_1p"
@@ -139,13 +143,13 @@
                         android:onClick="foul_1p"
 
                         android:text="foul" />
-                    />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -171,47 +175,84 @@
                     android:textColor="@android:color/black"
                     android:textSize="56sp" />
 
-                <Button
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="red_2p"
-                    android:text="red" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="yellow_2p"
-                    android:text="yellow" />
+                    <ImageButton
+                        android:id="@+id/red_ball_2p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/redball"
+                        android:onClick="red_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="green_2p"
-                    android:text="green" />
+                    <ImageButton
+                        android:id="@+id/yellow_ball_2p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/red_ball_2p_btn"
+                        android:layout_toEndOf="@id/red_ball_2p_btn"
+                        android:background="@drawable/yellowball"
+                        android:onClick="yellow_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="brown_2p"
-                    android:text="brown" />
+                    <ImageButton
+                        android:id="@+id/green_ball_2p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/red_ball_2p_btn"
+                        android:background="@drawable/greenball"
+                        android:onClick="green_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="blue_2p"
-                    android:text="blue" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yellow_ball_2p_btn"
+                        android:layout_toEndOf="@id/green_ball_2p_btn"
+                        android:layout_toRightOf="@id/green_ball_2p_btn"
+                        android:background="@drawable/brownball"
+                        android:onClick="brown_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="pink_2p"
-                    android:text="pink" />
+                    <ImageButton
+                        android:id="@+id/blue_ball_2p_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/green_ball_2p_btn"
+                        android:background="@drawable/blueball"
+                        android:onClick="blue_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="blue" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="black_2p"
-                    android:text="black" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/green_ball_2p_btn"
+                        android:layout_toRightOf="@id/blue_ball_2p_btn"
+                        android:background="@drawable/pinkball"
+                        android:onClick="pink_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="pink" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/blue_ball_2p_btn"
+                        android:background="@drawable/blackball"
+                        android:onClick="black_2p"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:text="black" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -223,18 +264,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:entries="@array/foul_values"></Spinner>
+                        android:entries="@array/foul_values">
+
+
+                    </Spinner>
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
                         android:onClick="foul_2p"
+
                         android:text="foul" />
-                    />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
 
         <Button
             android:layout_width="wrap_content"
@@ -243,6 +288,7 @@
             android:layout_centerHorizontal="true"
             android:onClick="scoreReset"
             android:text="reset" />
+
     </RelativeLayout>
 
 
